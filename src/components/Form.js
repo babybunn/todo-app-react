@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({setInputText, todos, setTodos, inputText}) => {
+const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
     const filterOptions = [
         'all',
         'completed',
@@ -22,6 +22,11 @@ const Form = ({setInputText, todos, setTodos, inputText}) => {
         ]);
         setInputText("")
     }
+
+    const filterHandlder = (e) => {
+        setStatus(e.target.value)
+    }
+
     return (
         <div className="form">
             <form>
@@ -31,7 +36,7 @@ const Form = ({setInputText, todos, setTodos, inputText}) => {
             <ul className="filters">
             <li><strong>Selected Filter: </strong></li>
             {filterOptions.map((value, index) => {
-                return <li className="filter-item" key={index}><input type="radio" name="filter" value={value} id={`input_filter_${value}`} /><label htmlFor={`input_filter_${value}`}>{value}</label></li>
+                return <li className="filter-item" key={index}><input onChange={filterHandlder} type="radio" name="filter" value={value} id={`input_filter_${value}`} /><label htmlFor={`input_filter_${value}`}>{value}</label></li>
             })}
             </ul>
         </div>

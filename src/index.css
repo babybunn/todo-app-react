@@ -81,3 +81,20 @@ li.todo-item.completed .todo-txt {
   background-color: #c52830;
   color: #FFF;
 }
+
+form  .form-control {
+  padding: 10px;
+  margin-right: 10px;
+  width: 100%;
+  max-width: 700px;
+}
+
+form button {
+  width: 70px;
+  padding: 10px 15px;
+  border: 1px solid #3383de;
+  background-color: #3383de;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 4px;
+}

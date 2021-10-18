@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Todo = ({todo, todos, setTodos}) => {
+const Todo = ({todo, todos, setTodos, setStatus}) => {
     const deleteHandler = () => {
         setTodos( todos.filter( el => el.id !== todo.id))
     }
