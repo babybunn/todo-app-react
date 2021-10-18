@@ -50,6 +50,7 @@ li.todo-item.completed .todo-txt {
   outline: none !important;
   padding: 10px 15px;
   font-weight: bold;
+  border-radius: 4px;
 }
 
 .todo-item .actions button:not(:last-child) {
@@ -63,7 +64,7 @@ li.todo-item.completed .todo-txt {
 }
 
 .btn-delete {
-  background-color: #c52830;
+  background-color: #F25F5C;
   color: #FFF;
 }
 
