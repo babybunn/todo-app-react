@@ -11,3 +11,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  padding: 40px;
+}
+
+.filters {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.filter-item {
+  position: relative;
+}
+
+.filter-item label {
+  text-transform: capitalize;
+}
+
+li.todo-item.completed .todo-txt {
+  text-decoration: line-through;
+}
+
+.todo-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.todo-txt {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.todo-item {
+  padding: 10px;
+  background-color: #efefef;
+  margin-bottom: 10px;
+}
+
+.todo-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item .actions button {
+  border: 0;
+  outline: none !important;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.todo-item .actions button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.btn-complete {
+  background-color: #3383de;
+  color: #FFF;
+  min-width: 120px;
+}
+
+.btn-delete {
+  background-color: #c52830;
+  color: #FFF;
+}
