@@ -5,7 +5,30 @@ import TodoList from './components/TodoList';
 
 function App() {
 
-  
+  useEffect( () => {
+    setTodos([
+      {
+        text: 'Learn ReactJS',
+        completed: false,
+        id: 1
+      },
+      {
+        text: 'Learn ReasonML',
+        completed: false,
+        id: 2
+      },
+      {
+        text: 'Learn ReScript',
+        completed: false,
+        id: 3
+      },
+      {
+        text: 'Crypto 101',
+        completed: false,
+        id: 4
+      }
+    ])
+  }, [])
 
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
