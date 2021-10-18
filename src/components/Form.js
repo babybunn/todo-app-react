@@ -34,7 +34,7 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
                 <button onClick={submitFormHandler} type="submit">Add</button>
             </form>
             <ul className="filters">
-            <li><strong>Selected Filter: </strong></li>
+            <li className="filter-item"><strong>Selected Filter: </strong></li>
             {filterOptions.map((value, index) => {
                 return <li className="filter-item" key={index}><input onChange={filterHandlder} type="radio" name="filter" value={value} id={`input_filter_${value}`} /><label htmlFor={`input_filter_${value}`}>{value}</label></li>
             })}
