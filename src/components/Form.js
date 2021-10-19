@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo, filterTodo } from "../redux/todoSlice";
-// import { filterTodo } from "../redux/filterSlice";
+import { addTodo } from "../redux/todoSlice";
 
-const Form = () => {
+const Form = ({todos, setStatus, status}) => {
     const filterOptions = [
         'all',
         'completed',
-        'uncompleted'
+        'incompleted'
     ]
 
     const dispatch = useDispatch()
@@ -31,11 +30,7 @@ const Form = () => {
     }
 
     const filterHandler = (e) => {
-        dispatch( 
-            filterTodo({
-                status: e.target.value
-            })
-        )
+        setStatus(e.target.value)
     }
 
     return (
@@ -47,7 +42,7 @@ const Form = () => {
             <ul className="filters">
             <li className="filter-item"><strong>Selected Filter: </strong></li>
             {filterOptions.map((value, index) => {
-                return <li className="filter-item" key={index}><input onChange={filterHandler} type="radio" name="filter" value={value} id={`input_filter_${value}`} /><label htmlFor={`input_filter_${value}`}>{value}</label></li>
+                return <li className="filter-item" key={index}><input onChange={filterHandler} type="radio" name="filter" value={value} id={`input_filter_${value}`} checked={ value === status }/><label htmlFor={`input_filter_${value}`}>{value}</label></li>
             })}
             </ul>
         </div>
