@@ -1,13 +1,16 @@
 import React from "react";
 import Todo from "./Todo";
+import { useSelector } from "react-redux";
 
-const TodoList = ({todos, setTodos, filteredTodos}) => {
+const TodoList = () => {
+    const todos = useSelector( (state) =>  state.todos );
+
     return (
         <div className="todo-wrapper">
             <ul className="todo-list">
                 {
-                    filteredTodos.map( (todo) => (
-                        <Todo todo={todo} key={todo.id} todos={todos} setTodos={setTodos} />
+                    todos.map( (todo) => (
+                        <Todo todo={todo} key={todo.id} />
                     ))
                 }
             </ul>

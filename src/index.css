@@ -16,6 +16,9 @@ code {
   padding: 40px;
 }
 
+button {
+  cursor: pointer;
+}
 
 li.todo-item.completed .todo-txt {
   text-decoration: line-through;
@@ -106,6 +109,7 @@ form button {
   border-radius: 50px;
   font-size: 14px;
   min-width: 40px;
+  cursor: pointer;
 }
 
 .filter-item input[type="radio"] {
